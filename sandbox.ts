@@ -1,11 +1,15 @@
-const character = 'mario';
+let character = 'mario';
+let age = 30;
+let isBlackBelt = false;
 
-console.log(character);
+// can see here how uncommenting the lines below will result in editor 
+// showing compiling errors due to mismatched type in reassignments
 
-const inputs = document.querySelectorAll('input');
+// character = 20;
+character = 'luigi';
 
-console.log(inputs);
+// age = 'yoshi';
+age = 40;
 
-inputs.forEach(input => {
-    console.log(input);
-});
+// isBlackBelt = 'yes';
+isBlackBelt = true;

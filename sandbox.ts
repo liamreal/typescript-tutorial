@@ -1,6 +1,8 @@
 // arrays
 let names = ['luigi', 'mario', 'yoshi']; // infers type as string
 
+// names = 'hello'; // cannot redefine array as string
+
 names.push('toad');
 // names.push(3); // error from adding number to string array
 // names[0] = 3; // even replacing gives error
@@ -18,7 +20,15 @@ mixed.push('ryu');
 mixed.push(10);
 mixed[0] = 3;
 
-mixed.push(false); // cannot push boolean as not one of inferred types
+// mixed.push(false); // cannot push boolean as not one of inferred types
+
+
+// objects
+let ninja = {
+    name: 'mario',
+    belt: 'black',
+    age: 30
+};
 
 
 

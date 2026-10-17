@@ -30,6 +30,20 @@ let ninja = {
     age: 30
 };
 
+ninja.age = 40;
+ninja.name = 'ryu';
+// ninja.age = '30'; // age needs to be a number, again since type inferred
+// ninja.skills = ['fighting', 'sneaking']; // cant add properties to object
+
+// can update object to be an entirely new instance of same object (i.e. same properties)
+// basically CANNOT change structure by omitting/adding properties
+ninja = {
+    name: 'yoshi',
+    belt: 'orange',
+    age: 40,
+    // excommunicated: true // cannot add new properties
+}
+
 
 
 

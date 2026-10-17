@@ -13,4 +13,4 @@ isBlackBelt = true;
 const circ = (diameter) => {
     return diameter * Math.PI;
 };
-console.log(circ('hello'));
+console.log(circ(7.5));

@@ -8,5 +8,8 @@ age = 30;
 // isLoggedIn = 25; // same for others
 isLoggedIn = true;
 // arrays
+let ninjas; // array of strings
+// ninjas = [10, 23]; // not allowed since values not string
+ninjas = ['yoshi', 'mario'];
 // union types
 // objects

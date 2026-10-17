@@ -10,12 +10,9 @@ age = 30;
 isLoggedIn = true;
 
 // arrays
-let ninjas: string[]; // array of strings
+let ninjas: string[] = []; // empty array of strings
 
-// ninjas.push('new'); // cannot push to array initialised without value
-
-// ninjas = [10, 23]; // not allowed since values not string
-ninjas = ['yoshi', 'mario'];
+ninjas.push('shaun');
 
 
 // union types

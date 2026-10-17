@@ -42,7 +42,7 @@ ninja = {
     belt: 'orange',
     age: 40,
     // excommunicated: true // cannot add new properties
-}
+};
 
 
 

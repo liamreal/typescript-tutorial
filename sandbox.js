@@ -11,4 +11,9 @@ isLoggedIn = true;
 let ninjas = []; // empty array of strings
 ninjas.push('shaun');
 // union types
+let mixed = []; // array of strings and numbers
+mixed.push('hello');
+mixed.push(20);
+// mixed.push(false); // error when booleans unless part of union type
+console.log(mixed);
 // objects

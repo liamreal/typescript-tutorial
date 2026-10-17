@@ -29,3 +29,16 @@ uid = 123;
 // uid = false; // cannot assign because not string|number
 
 // objects
+let ninjaOne: object;
+ninjaOne = { name: 'yoshi', age: 30 };
+ninjaOne = []; // can do this because an array is an object
+
+// to be more specific, can define object to have certain properties
+let ninjaTwo: {
+    name: string,
+    age: number,
+    beltColour: string
+}
+
+// ninjaTwo = []; // cannot define as array
+ninjaTwo = { name: 'mario', age: 20, beltColour: 'black' }; // can define with EXACT properties previously initialised

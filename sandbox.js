@@ -16,4 +16,8 @@ mixed.push('hello');
 mixed.push(20);
 // mixed.push(false); // error when booleans unless part of union type
 console.log(mixed);
+let uid; // can do same for variables, dont need parenthess when not an array
+uid = '123';
+uid = 123;
+// uid = false; // cannot assign because not string|number
 // objects

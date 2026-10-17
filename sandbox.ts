@@ -1,22 +1,27 @@
-let character = 'mario';
-let age = 30;
-let isBlackBelt = false;
+// arrays
+let names = ['luigi', 'mario', 'yoshi']; // infers type as string
 
-// can see here how uncommenting the lines below will result in editor 
-// showing compiling errors due to mismatched type in reassignments
+names.push('toad');
+// names.push(3); // error from adding number to string array
+// names[0] = 3; // even replacing gives error
 
-// character = 20;
-character = 'luigi';
+let numbers = [10, 20, 30, 40]; // infers type as number
 
-// age = 'yoshi';
-age = 40;
-
-// isBlackBelt = 'yes';
-isBlackBelt = true;
-
-const circ = (diameter: number) => {
-    return diameter * Math.PI;
-}
+numbers.push(25);
+// numbers.push('shaun'); // same again
+// numbers[1] = 'shaun'; // even replacing
 
 
-console.log(circ(7.5))
+let mixed = ['ken', 4, 'chun-li', 8, 9]; // infers type as string | number
+
+mixed.push('ryu');
+mixed.push(10);
+mixed[0] = 3;
+
+mixed.push(false); // cannot push boolean as not one of inferred types
+
+
+
+
+
+

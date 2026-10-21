@@ -17,5 +17,6 @@ const amount = document.querySelector('#amount');
 form.addEventListener('submit', (e) => {
     e.preventDefault(); // prevent page from refreshing (default behaviour)
     // log all values
-    console.log(type.value, toFrom.value, details.value, amount.value);
+    console.log(type.value, toFrom.value, details.value, amount.valueAsNumber // cast to number instead of default value being string
+    );
 });

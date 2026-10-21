@@ -5,3 +5,7 @@ const logDetails = (uid, item) => {
 const greet = (user) => {
     console.log(`${user.name} says hello`);
 };
+// easy to reuse type aliases in other functions that require that kind of type
+const greetAgain = (user) => {
+    console.log(`${user.name} says hello`);
+};

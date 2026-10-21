@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let age = 25; // can be any type
 // USE CAREFULLY!!!
 // basically revert typescript back to javascript

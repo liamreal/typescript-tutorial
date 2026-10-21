@@ -16,8 +16,8 @@ add(5, 10);
 add(1, 1, 20);
 add(3, 4, 'yolo');
 
-
-const minus = (a: number, b: number) => {
+// can also explicitly define return type so easier to see at a glance
+const minus = (a: number, b: number): number => {
     return a + b;
 }
 

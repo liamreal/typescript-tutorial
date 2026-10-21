@@ -12,6 +12,7 @@ add(5, 10);
 // add(5, '10'); // cannot pass as string, ONLY as number
 add(1, 1, 20);
 add(3, 4, 'yolo');
+// can also explicitly define return type so easier to see at a glance
 const minus = (a, b) => {
     return a + b;
 };

@@ -1,5 +1,6 @@
 
 
+// example 1
 let greet: (a: string, b: string) => void;
 
 // notice how name and greeting do not need to match a and b, just the type needs to match
@@ -7,7 +8,15 @@ greet = (name: string, greeting: string) => {
     console.log(`${name} says ${greeting}`);
 }
 
-// // gives error since types do not match
-// greet = (name: number, greeting: string) => {
-//     console.log(`${name} says ${greeting}`);
-// }
+
+// example 2
+let calc: (a: number, b: number, c: string) => number;
+
+calc = (numOne: number, numTwo: number, action: string) => {
+    if (action == 'add') {
+        return numOne + numTwo;
+    } else { // need else clause otherwise returns void (NOT ALLOWED by function definition, MUST return number)
+        return numOne - numTwo;
+    }
+}
+

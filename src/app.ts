@@ -1,10 +1,4 @@
-const anchor = document.querySelector('a');
+const anchor = document.querySelector('a')!; // adding ! excludes null checking, ONLY DONE if devs sure this exists
 
 console.log(anchor);
-
-// console.log(anchor.href); // anchor may be null so typescript gives error
-
-// checking if null is an option
-if (anchor) {
-    console.log(anchor.href);
-}
+console.log(anchor.href); // now no error because of !

@@ -1,26 +1,10 @@
-let greet: Function; // can also specify type on definition
 
-// greet = 'hello'; // still cannot assign to string since is Function type
 
-greet = () => {
-    console.log('hello, again');
+const logDetails = (uid: string | number, item: string) => {
+    console.log(`${item} has a uid of ${uid}`);
 }
 
-const add = (a: number, b: number, c: number | string = 10) => {
-    console.log(a + b);
-    console.log(c);
+
+const greet = (user: {name: string, id: string | number}) => {
+    console.log(`${user.name} says hello`);
 }
-
-add(5, 10);
-// add(5, '10'); // cannot pass as string, ONLY as number
-add(1, 1, 20);
-add(3, 4, 'yolo');
-
-// can also explicitly define return type so easier to see at a glance
-const minus = (a: number, b: number): number => {
-    return a + b;
-}
-
-let result = minus(10, 7); // type inferred as number
-
-// result = 'new'; // cannot change type from number

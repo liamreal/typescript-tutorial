@@ -15,3 +15,12 @@ add(5, 10);
 // add(5, '10'); // cannot pass as string, ONLY as number
 add(1, 1, 20);
 add(3, 4, 'yolo');
+
+
+const minus = (a: number, b: number) => {
+    return a + b;
+}
+
+let result = minus(10, 7); // type inferred as number
+
+// result = 'new'; // cannot change type from number

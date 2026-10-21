@@ -1,16 +1,13 @@
-type StringOrNum = string | number;
-type objWithName = { name: string, uid: StringOrNum };
 
-const logDetails = (uid: StringOrNum, item: string) => {
-    console.log(`${item} has a uid of ${uid}`);
+
+let greet: (a: string, b: string) => void;
+
+// notice how name and greeting do not need to match a and b, just the type needs to match
+greet = (name: string, greeting: string) => {
+    console.log(`${name} says ${greeting}`);
 }
 
-
-const greet = (user: objWithName) => {
-    console.log(`${user.name} says hello`);
-}
-
-// easy to reuse type aliases in other functions that require that kind of type
-const greetAgain = (user: objWithName) => {
-    console.log(`${user.name} says hello`);
-}
+// // gives error since types do not match
+// greet = (name: number, greeting: string) => {
+//     console.log(`${name} says ${greeting}`);
+// }

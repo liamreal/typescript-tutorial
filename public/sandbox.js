@@ -1,5 +1,3 @@
 "use strict";
-let greet = () => {
-    console.log('hello world');
-}; // typescript infers this as function type
+let greet; // can also specify type on definition
 // greet = 'hello'; // type inferred so cannot reassign

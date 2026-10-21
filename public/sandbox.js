@@ -4,7 +4,7 @@ let greet; // can also specify type on definition
 greet = () => {
     console.log('hello, again');
 };
-const add = (a, b, c) => {
+const add = (a, b, c = 10) => {
     console.log(a + b);
     console.log(c);
 };

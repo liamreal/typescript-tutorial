@@ -11,5 +11,24 @@ console.log(anchor.href); // now no error because of !
 // const form = document.querySelector('.new-item-form')!; // grab a class, BUT this is not longer HTMLFormElement and is just Element
 const form = document.querySelector('.new-item-form') as HTMLFormElement; // cast to HTMLFormElement
 
-console.log(form.children);
+// console.log(form.children);
 
+
+// inputs (using id to grab unique elements)
+const type = document.querySelector('#type') as HTMLSelectElement;
+const toFrom = document.querySelector('#tofrom') as HTMLInputElement;
+const details = document.querySelector('#details') as HTMLInputElement;
+const amount = document.querySelector('#amount') as HTMLInputElement;
+
+// adding event listener to form to run this script once submitted
+form.addEventListener('submit', (e: Event) => {
+    e.preventDefault(); // prevent page from refreshing (default behaviour)
+
+    // log all values
+    console.log(
+        type.value,
+        toFrom.value,
+        details.value,
+        amount.value
+    );
+})

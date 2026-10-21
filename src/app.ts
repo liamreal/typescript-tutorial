@@ -11,4 +11,5 @@ console.log(anchor.href); // now no error because of !
 // const form = document.querySelector('.new-item-form')!; // grab a class, BUT this is not longer HTMLFormElement and is just Element
 const form = document.querySelector('.new-item-form') as HTMLFormElement; // cast to HTMLFormElement
 
+console.log(form.children);
 

@@ -1,44 +1,10 @@
-// explicit types
-let character: string; // want to initialise a variable but dont yet have a value
-let age: number;
-let isLoggedIn: boolean;
 
-// age = 'luigi'; // cannot assign string to explicit number type
-age = 30;
+let age: any = 25; // can be any type
 
-// isLoggedIn = 25; // same for others
-isLoggedIn = true;
+age = true;
+console.log(age);
 
-// arrays
-let ninjas: string[] = []; // empty array of strings
+age = 'hello';
+console.log(age);
 
-ninjas.push('shaun');
 
-// union types
-let mixed: (string|number)[] = []; // array of strings and numbers
-
-mixed.push('hello');
-mixed.push(20);
-// mixed.push(false); // error when booleans unless part of union type
-
-console.log(mixed);
-
-let uid: string|number; // can do same for variables, dont need parenthess when not an array
-uid = '123';
-uid = 123;
-// uid = false; // cannot assign because not string|number
-
-// objects
-let ninjaOne: object;
-ninjaOne = { name: 'yoshi', age: 30 };
-ninjaOne = []; // can do this because an array is an object
-
-// to be more specific, can define object to have certain properties
-let ninjaTwo: {
-    name: string,
-    age: number,
-    beltColour: string
-}
-
-// ninjaTwo = []; // cannot define as array
-ninjaTwo = { name: 'mario', age: 20, beltColour: 'black' }; // can define with EXACT properties previously initialised

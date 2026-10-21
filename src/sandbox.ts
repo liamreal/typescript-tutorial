@@ -1,10 +1,10 @@
+type StringOrNum = string | number;
 
-
-const logDetails = (uid: string | number, item: string) => {
+const logDetails = (uid: StringOrNum, item: string) => {
     console.log(`${item} has a uid of ${uid}`);
 }
 
 
-const greet = (user: {name: string, id: string | number}) => {
+const greet = (user: {name: string, id: StringOrNum}) => {
     console.log(`${user.name} says hello`);
 }

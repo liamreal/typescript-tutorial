@@ -16,23 +16,24 @@ form.addEventListener('submit', (e: Event) => {
 
     let doc: HasFormatter;
 
-    if (type.value === 'invoice') {
-        doc = new Invoice(toFrom.value, details.value, amount.valueAsNumber);
-    } else { // BUGGY if more types added
-        doc = new Payment(toFrom.value, details.value, amount.valueAsNumber);
+    // my own improvement, reading ONCE from DOM
+    const formValues = { 
+        toFromValue: toFrom.value, 
+        detailsValue: details.value, 
+        amountValue: amount.valueAsNumber
     }
 
-        
-    // const toFromValue = toFrom.value;
-    // const detailsValue = details.value;
-    // const amountValue = amount.valueAsNumber;
-
-    // if (type.value === 'invoice') {
-    //     doc = new Invoice(toFromValue, detailsValue, amountValue);
-    // } else if (type.value === 'payment') {
-    //     doc = new Payment(toFromValue, detailsValue, amountValue);
-    // }
+    // explicit types, no match throws error
+    switch(type.value) {
+        case 'invoice':
+            doc = new Invoice(formValues.toFromValue, formValues.detailsValue, formValues.amountValue);
+            break;
+        case 'payment':
+            doc = new Payment(formValues.toFromValue, formValues.detailsValue, formValues.amountValue);
+            break;
+        default:
+            throw new Error(`invalid document type: ${type.value}`);
+    }
 
     console.log(doc);
-
 })

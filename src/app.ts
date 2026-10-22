@@ -6,6 +6,24 @@ interface IsPerson {
     spend(a: number): number;
 }
 
+// const me: IsPerson = {}; // cannot instantiate without necessary fields/methods
+
+const me: IsPerson = {
+    name: 'shaun',
+    age: 30,
+    // dont need to define return type of methods, typescript infers and, if it doesnt match interface, displays error
+    speak(text: string): void {
+        console.log(text);
+    },
+    spend(amount: number) { // typescript inferred return type as number, and matched interface
+        console.log('I spent', amount);
+        return amount;
+    },
+    // skills: [] // cannot add -- does not match interface
+};
+
+console.log(me);
+
 import { Invoice } from "./classes/Invoice.js";
 
 const invOne = new Invoice('mario', 'work on the mario website', 250);

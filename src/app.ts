@@ -31,6 +31,10 @@ let invoices: Invoice[] = []; // only invoice objects allowed
 invoices.push(invOne); // allowed
 invoices.push(invTwo); // also allowed
 
+// can edit properties since by default fields are public (will cover next how to add access modifiers)
+invOne.client = 'yoshi';
+invTwo.amount = 400;
+
 console.log(invoices); // list of invoices
 
 const form = document.querySelector('.new-item-form') as HTMLFormElement; // cast to HTMLFormElement

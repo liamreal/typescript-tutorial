@@ -14,17 +14,22 @@ console.log(docOne);
 console.log(docOne.name); // properties preserved
 
 // with interfaces
-interface Resource {
+interface Resource<T> {
     uid: number;
     resourceName: string;
-    data: object;
+    data: T;
 }
 
-const docThree: Resource = {
+const docThree: Resource<object> = {
     uid: 1,
     resourceName: 'person',
-    data: { name: 'shaun' } // no problems here
-    // data: 'shaun' // not allowed, has to be an object, can be allowed by using generics
+    data: { name: 'shaun' } // allowed
+}
+
+const docFour: Resource<string> = {
+    uid: 2,
+    resourceName: 'animal',
+    data: 'dog' // allowed
 }
 
 

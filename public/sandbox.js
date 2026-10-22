@@ -13,6 +13,10 @@ console.log(docOne.name); // properties preserved
 const docThree = {
     uid: 1,
     resourceName: 'person',
-    data: { name: 'shaun' } // no problems here
-    // data: 'shaun' // not allowed, has to be an object, can be allowed by using generics
+    data: { name: 'shaun' } // allowed
+};
+const docFour = {
+    uid: 2,
+    resourceName: 'animal',
+    data: 'dog' // allowed
 };

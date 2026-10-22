@@ -22,7 +22,16 @@ const me: IsPerson = {
     // skills: [] // cannot add -- does not match interface
 };
 
+const greetPerson = (person: IsPerson) => {
+    console.log('hello ', person.name); // intellisense autocompletes IsPerson properties
+}
+
+// greetPerson({ name: 'shaun' }); // not an object with IsPerson interface
+greetPerson(me); // allowed as it implements IsPerson
+
 let someone: IsPerson; // in future needs to match structure of IsPerson
+
+// greetPerson(someone); // no implementation yet so is undefined
 
 console.log(me);
 

@@ -26,3 +26,7 @@ let arr = ['ryu', 25, true];
 arr[0] = false;
 arr[1] = 'yoshi';
 arr = [30, false];
+let tup = ['ryu', 25, true]; // tuples HAVE to be defined like this
+// let tup: [string, number, boolean] = [30, 'name', true]; // not allowed (does not reflect type positions we defined)
+let tupTest; // or initialised
+tupTest = ['a', 8, false]; // then defined

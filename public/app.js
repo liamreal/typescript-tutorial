@@ -4,10 +4,13 @@ class Invoice {
     client;
     details;
     amount;
-    constructor(c, d, a) {
-        this.client = c;
-        this.details = d;
-        this.amount = a;
+    // shorthand way of constructing class (REQUIRES access modifiers)
+    constructor(client, 
+    // client: string // would not be allowed since no access modifier
+    details, amount) {
+        this.client = client;
+        this.details = details;
+        this.amount = amount;
     }
     format() {
         return `${this.client} owes €${this.amount} for ${this.details}`;

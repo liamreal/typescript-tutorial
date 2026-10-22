@@ -32,9 +32,11 @@ arr[0] = false;
 arr[1] = 'yoshi';
 arr = [30, false]
 
-let tup: [string, number, boolean] = ['ryu', 25, true]; // tuples HAVE to be defined like this
-// let tup: [string, number, boolean] = [30, 'name', true]; // not allowed (does not reflect type positions we defined)
+let tup: [string, number, boolean] = ['ryu', 25, true];
 
-let tupTest: [string, number, boolean]; // or initialised
-tupTest = ['a', 8, false]; // then defined
+// tup[0] = 30; // not allowed
+// tup[0] = false; // not allowed
+tup[0] = 'ken'; // allowed
 
+// tup[1] = 'hello'; // not allowed
+tup[1] = 10; // allowed

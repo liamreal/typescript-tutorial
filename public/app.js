@@ -1,8 +1,8 @@
 "use strict";
 // classes
 class Invoice {
-    client;
-    details;
+    client; // no access modifer defaults to public
+    details; // cannot directly access from outside class
     amount;
     constructor(c, d, a) {
         this.client = c;
@@ -19,7 +19,7 @@ let invoices = [];
 invoices.push(invOne);
 invoices.push(invTwo);
 invoices.forEach(inv => {
-    console.log(inv.client, inv.details, inv.amount, inv.format());
+    console.log(inv.client, inv.amount, inv.format());
 });
 const form = document.querySelector('.new-item-form');
 // inputs

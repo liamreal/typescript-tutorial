@@ -1,8 +1,8 @@
 // classes
 class Invoice {
-    client: string;
-    details: string;
-    amount: number;
+    client: string; // no access modifer defaults to public
+    private details: string; // cannot directly access from outside class
+    public amount: number;
 
     constructor(c: string, d: string, a: number) {
         this.client = c;
@@ -23,7 +23,7 @@ invoices.push(invOne);
 invoices.push(invTwo);
 
 invoices.forEach(inv => {
-    console.log(inv.client, inv.details, inv.amount, inv.format());
+    console.log(inv.client, inv.amount, inv.format());
 });
 
 const form = document.querySelector('.new-item-form') as HTMLFormElement;

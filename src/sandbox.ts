@@ -9,4 +9,4 @@ const addUID = (obj: object) => {
 let docOne = addUID({name: 'yoshi', age: 40});
 
 console.log(docOne);
-// console.log(docOne.name); // because generic, cannot ensure name exists (since addUID takes in and returns any object)
+// console.log(docOne.name); // not allowed here, cannot ensure name exists (since addUID takes in and returns any object)

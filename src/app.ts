@@ -1,6 +1,6 @@
 // classes
 class Invoice {
-    readonly client: string; // cannot modify from anywhere
+    readonly client: string; // cannot modify from anywhere (like const but for typescript class fields)
     private details: string;
     public amount: number;
 

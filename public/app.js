@@ -1,7 +1,7 @@
 "use strict";
 // classes
 class Invoice {
-    client; // cannot modify from anywhere
+    client; // cannot modify from anywhere (like const but for typescript class fields)
     details;
     amount;
     constructor(c, d, a) {

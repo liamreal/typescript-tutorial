@@ -1,1 +1,0 @@
-console.log("app"); // to test src root dir is correctly set with include attribute disallowing any ts files outside of src directory

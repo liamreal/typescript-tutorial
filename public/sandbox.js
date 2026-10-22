@@ -1,28 +1,12 @@
 "use strict";
-// GENERICS
-// reusable blocks of code which can be used with different types
-// usually T, but can be anything (like Java)
-const addUID = (obj) => {
-    let uid = Math.floor(Math.random() * 100);
-    return Object.assign(Object.assign({}, obj), { uid });
-};
-let docOne = addUID({ name: 'yoshi', age: 40 });
-// let docTwo = addUID({age: 20}); // not allowed since we restricted it to objects with at least a name property
-console.log(docOne);
-console.log(docOne.name); // properties preserved
-const docThree = {
+// ENUMS
+const docOne = {
     uid: 1,
-    resourceName: 'person',
-    data: { name: 'shaun' } // allowed
+    resourceType: 3,
+    data: { title: 'name of the wind' }
 };
-const docFour = {
-    uid: 2,
-    resourceName: 'animal',
-    data: 'dog' // allowed
+const docTwo = {
+    uid: 10,
+    resourceType: 4,
+    data: { name: 'yoshi' }
 };
-const docFive = {
-    uid: 3,
-    resourceName: 'shoppingList',
-    data: ['bread', 'milk', 'toilet roll']
-};
-console.log(docThree, docFour, docFive);

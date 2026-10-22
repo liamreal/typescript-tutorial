@@ -20,3 +20,9 @@ const docFour = {
     resourceName: 'animal',
     data: 'dog' // allowed
 };
+const docFive = {
+    uid: 3,
+    resourceName: 'shoppingList',
+    data: ['bread', 'milk', 'toilet roll']
+};
+console.log(docThree, docFour, docFive);

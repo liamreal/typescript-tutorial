@@ -32,4 +32,12 @@ const docFour: Resource<string> = {
     data: 'dog' // allowed
 }
 
+const docFive: Resource<string[]> = {
+    uid: 3,
+    resourceName: 'shoppingList',
+    data: ['bread', 'milk', 'toilet roll']
+}
+
+console.log(docThree, docFour, docFive);
+
 

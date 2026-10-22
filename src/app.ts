@@ -14,10 +14,25 @@ const amount = document.querySelector('#amount') as HTMLInputElement;
 form.addEventListener('submit', (e: Event) => {
     e.preventDefault(); // no page refresh
 
-    console.log(
-        type.value,
-        toFrom.value,
-        details.value,
-        amount.valueAsNumber
-    );
+    let doc: HasFormatter;
+
+    if (type.value === 'invoice') {
+        doc = new Invoice(toFrom.value, details.value, amount.valueAsNumber);
+    } else { // BUGGY if more types added
+        doc = new Payment(toFrom.value, details.value, amount.valueAsNumber);
+    }
+
+        
+    // const toFromValue = toFrom.value;
+    // const detailsValue = details.value;
+    // const amountValue = amount.valueAsNumber;
+
+    // if (type.value === 'invoice') {
+    //     doc = new Invoice(toFromValue, detailsValue, amountValue);
+    // } else if (type.value === 'payment') {
+    //     doc = new Payment(toFromValue, detailsValue, amountValue);
+    // }
+
+    console.log(doc);
+
 })

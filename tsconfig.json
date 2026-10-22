@@ -27,7 +27,7 @@
     // Recommended Options
     "strict": true,
     "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": false, // false otherwise interfaces need to be imported a specific way
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     // "moduleDetection": "force", // CAUSES UnexpectedSyntaxError when set to default "force", best to leave out

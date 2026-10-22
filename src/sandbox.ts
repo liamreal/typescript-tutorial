@@ -2,13 +2,13 @@
 // reusable blocks of code which can be used with different types
 
 // usually T, but can be anything (like Java)
-const addUID = <T extends object>(obj: T) => {
+const addUID = <T extends {name: string}>(obj: T) => {
     let uid = Math.floor(Math.random() * 100);
     return {...obj, uid};
 }
 
 let docOne = addUID({name: 'yoshi', age: 40});
-// let docTwo = addUID('hello'); // not allowed now that we made the method require a type that extends object
+// let docTwo = addUID({age: 20}); // not allowed since we restricted it to objects with at least a name property
 
 console.log(docOne);
-console.log(docOne.name); // now properties are still preserved and we can do this to any object type
+console.log(docOne.name); // properties preserved

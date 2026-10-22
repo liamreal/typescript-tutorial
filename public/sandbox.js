@@ -7,6 +7,6 @@ const addUID = (obj) => {
     return Object.assign(Object.assign({}, obj), { uid });
 };
 let docOne = addUID({ name: 'yoshi', age: 40 });
-// let docTwo = addUID('hello'); // not allowed now that we made the method require a type that extends object
+// let docTwo = addUID({age: 20}); // not allowed since we restricted it to objects with at least a name property
 console.log(docOne);
-console.log(docOne.name); // now properties are still preserved and we can do this to any object type
+console.log(docOne.name); // properties preserved

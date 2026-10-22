@@ -27,8 +27,8 @@ arr[0] = false;
 arr[1] = 'yoshi';
 arr = [30, false];
 let tup = ['ryu', 25, true];
-// tup[0] = 30; // not allowed
-// tup[0] = false; // not allowed
-tup[0] = 'ken'; // allowed
-// tup[1] = 'hello'; // not allowed
-tup[1] = 10; // allowed
+tup[0] = 'ken';
+tup[1] = 10;
+// we know first and second item will always be of a particular type
+let student;
+student = ['chun-li', 223423];

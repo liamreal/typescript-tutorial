@@ -33,10 +33,9 @@ arr[1] = 'yoshi';
 arr = [30, false]
 
 let tup: [string, number, boolean] = ['ryu', 25, true];
+tup[0] = 'ken';
+tup[1] = 10;
 
-// tup[0] = 30; // not allowed
-// tup[0] = false; // not allowed
-tup[0] = 'ken'; // allowed
-
-// tup[1] = 'hello'; // not allowed
-tup[1] = 10; // allowed
+// we know first and second item will always be of a particular type
+let student: [string, number];
+student = ['chun-li', 223423]; 

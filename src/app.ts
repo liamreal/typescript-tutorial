@@ -2,6 +2,19 @@ import { Invoice } from "./classes/Invoice.js";
 import { Payment } from "./classes/Payment.js";
 import { HasFormatter } from './interfaces/HasFormatter.js';
 
+let docOne: HasFormatter; // will need to have same format as HasFormatter
+let docTwo: HasFormatter;
+// let docThree: HasFormatter & HasPrinter; // can combine it to require multiple DIFFERENT interfaces
+// let docFour: HasFormatter & HasFormatter; // can also combine same one, equivalent to just having one HasFormatter
+
+
+// can create an Invoice obj and store in docOne since Invoice obj implements HasFormatter
+docOne = new Invoice('yoshi', 'web work', 250);
+
+// can do same with Payment obj for docTwo
+docTwo = new Payment('mario', 'plumbing work', 200)
+
+
 const invOne = new Invoice('mario', 'work on the mario website', 250);
 const invTwo = new Invoice('luigi', 'work on the luigi website', 300);
 

@@ -11,6 +11,7 @@ class Invoice {
     }
 
     format() {
+        // this.client = 'changed'; // not allowed (still CAN change it but typescript shows an error warning)
         return `${this.client} owes €${this.amount} for ${this.details}`;
     }
 }
@@ -22,7 +23,7 @@ let invoices: Invoice[] = [];
 invoices.push(invOne);
 invoices.push(invTwo);
 
-// invOne.client = 'baller'; // not allowed (still CAN change it but typescript shows an error warning)
+// invOne.client = 'baller'; // also not allowed
 
 invoices.forEach(inv => {
     console.log(inv.client, inv.amount, inv.format());

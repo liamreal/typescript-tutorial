@@ -1,14 +1,25 @@
-const anchor = document.querySelector('a')!; // adding ! excludes null checking, ONLY DONE if devs sure this exists
 
-console.log(anchor);
-console.log(anchor.href); // now no error because of !
+// classes
+class Invoice {
+    // fields with explicit type
+    client: string;
+    details: string;
+    amount: number;
 
-// notice how we get HTMLAnchorElement and all its related methods through a typescript intellisense, very handy
+    // how constructors are specified
+    constructor(c: string, d: string, a: number) {
+        this.client = c;
+        this.details = d;
+        this.amount = a;
+    }
 
-// a more advanced example:
+    // // my own testing, CANNOT overload constructors, can ONLY have one implementation, 
+    // // if you wanted something like below, add default values (e.g. a: number = 0)
+    // constructor(c: string, d: string) {
+    //     this(c, d, 0);
+    // }
+}
 
-// const form = document.querySelector('form')!; // can also grab a form, but what if we have multiple forms?
-// const form = document.querySelector('.new-item-form')!; // grab a class, BUT this is not longer HTMLFormElement and is just Element
 const form = document.querySelector('.new-item-form') as HTMLFormElement; // cast to HTMLFormElement
 
 // console.log(form.children);

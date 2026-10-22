@@ -17,6 +17,14 @@ console.log(docOne.name); // properties preserved
 interface Resource {
     uid: number;
     resourceName: string;
-    data: '???'; // we want this to be generic, may be string, may be object, possibilities are endless
+    data: object;
 }
+
+const docThree: Resource = {
+    uid: 1,
+    resourceName: 'person',
+    data: { name: 'shaun' } // no problems here
+    // data: 'shaun' // not allowed, has to be an object, can be allowed by using generics
+}
+
 

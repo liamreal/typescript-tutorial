@@ -1,4 +1,5 @@
 import { Invoice } from "./classes/Invoice.js";
+import { ListTemplate } from "./classes/ListTemplate.js";
 import { Payment } from "./classes/Payment.js";
 const form = document.querySelector('.new-item-form');
 // inputs
@@ -6,6 +7,9 @@ const type = document.querySelector('#type');
 const toFrom = document.querySelector('#tofrom');
 const details = document.querySelector('#details');
 const amount = document.querySelector('#amount');
+// list template instance
+const ul = document.querySelector('ul.item-list');
+const list = new ListTemplate(ul);
 // run on submit
 form.addEventListener('submit', (e) => {
     e.preventDefault(); // no page refresh
@@ -14,10 +18,11 @@ form.addEventListener('submit', (e) => {
     const formValues = {
         toFromValue: toFrom.value,
         detailsValue: details.value,
-        amountValue: amount.valueAsNumber
+        amountValue: amount.valueAsNumber,
+        typeValue: type.value
     };
     // explicit types, no match throws error
-    switch (type.value) {
+    switch (formValues.typeValue) {
         case 'invoice':
             doc = new Invoice(formValues.toFromValue, formValues.detailsValue, formValues.amountValue);
             break;
@@ -27,5 +32,6 @@ form.addEventListener('submit', (e) => {
         default:
             throw new Error(`invalid document type: ${type.value}`);
     }
-    console.log(doc);
+    // use our ListTemplate render method
+    list.render(doc, formValues.typeValue, 'end');
 });

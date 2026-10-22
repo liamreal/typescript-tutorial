@@ -1,7 +1,7 @@
 "use strict";
 // classes
 class Invoice {
-    client; // cannot modify from anywhere (like const but for typescript class fields)
+    client;
     details;
     amount;
     constructor(c, d, a) {
@@ -10,7 +10,6 @@ class Invoice {
         this.amount = a;
     }
     format() {
-        // this.client = 'changed'; // not allowed (still CAN change it but typescript shows an error warning)
         return `${this.client} owes €${this.amount} for ${this.details}`;
     }
 }
@@ -19,7 +18,6 @@ const invTwo = new Invoice('luigi', 'work on the luigi website', 300);
 let invoices = [];
 invoices.push(invOne);
 invoices.push(invTwo);
-// invOne.client = 'baller'; // also not allowed
 invoices.forEach(inv => {
     console.log(inv.client, inv.amount, inv.format());
 });

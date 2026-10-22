@@ -1,7 +1,7 @@
 // classes
 class Invoice {
-    client: string; // no access modifer defaults to public
-    private details: string; // cannot directly access from outside class
+    readonly client: string; // cannot modify from anywhere
+    private details: string;
     public amount: number;
 
     constructor(c: string, d: string, a: number) {
@@ -21,6 +21,8 @@ const invTwo = new Invoice('luigi', 'work on the luigi website', 300);
 let invoices: Invoice[] = [];
 invoices.push(invOne);
 invoices.push(invTwo);
+
+// invOne.client = 'baller'; // not allowed (still CAN change it but typescript shows an error warning)
 
 invoices.forEach(inv => {
     console.log(inv.client, inv.amount, inv.format());

@@ -1,8 +1,8 @@
 "use strict";
 // classes
 class Invoice {
-    client; // no access modifer defaults to public
-    details; // cannot directly access from outside class
+    client; // cannot modify from anywhere
+    details;
     amount;
     constructor(c, d, a) {
         this.client = c;
@@ -18,6 +18,7 @@ const invTwo = new Invoice('luigi', 'work on the luigi website', 300);
 let invoices = [];
 invoices.push(invOne);
 invoices.push(invTwo);
+// invOne.client = 'baller'; // not allowed (still CAN change it but typescript shows an error warning)
 invoices.forEach(inv => {
     console.log(inv.client, inv.amount, inv.format());
 });

@@ -12,3 +12,10 @@ let docOne = addUID({name: 'yoshi', age: 40});
 
 console.log(docOne);
 console.log(docOne.name); // properties preserved
+
+// with interfaces
+interface Resource {
+    uid: number;
+    resourceName: string;
+    data: '???';
+}

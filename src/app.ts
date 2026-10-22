@@ -13,12 +13,17 @@ class Invoice {
         this.amount = a;
     }
 
-    // // my own testing, CANNOT overload constructors, can ONLY have one implementation, 
-    // // if you wanted something like below, add default values (e.g. a: number = 0)
-    // constructor(c: string, d: string) {
-    //     this(c, d, 0);
-    // }
+    // sample method
+    format() {
+        return `${this.client} owes €${this.amount} for ${this.details}`;
+    }
 }
+
+// creating sample objects
+const invOne = new Invoice('mario', 'work on the mario website', 250);
+const invTwo = new Invoice('luigi', 'work on the luigi website', 300);
+
+console.log(invOne, invTwo);
 
 const form = document.querySelector('.new-item-form') as HTMLFormElement; // cast to HTMLFormElement
 

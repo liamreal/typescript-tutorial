@@ -11,7 +11,15 @@ class Invoice {
         this.details = d;
         this.amount = a;
     }
+    // sample method
+    format() {
+        return `${this.client} owes €${this.amount} for ${this.details}`;
+    }
 }
+// creating sample objects
+const invOne = new Invoice('mario', 'work on the mario website', 250);
+const invTwo = new Invoice('luigi', 'work on the luigi website', 300);
+console.log(invOne, invTwo);
 const form = document.querySelector('.new-item-form'); // cast to HTMLFormElement
 // console.log(form.children);
 // inputs (using id to grab unique elements)

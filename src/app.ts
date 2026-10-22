@@ -1,9 +1,7 @@
 // classes
 class Invoice {
-    // shorthand way of constructing class (REQUIRES access modifiers)
     constructor(
         readonly client: string,
-        // client: string // would not be allowed since no access modifier
         private details: string,
         public amount: number
     ) {}

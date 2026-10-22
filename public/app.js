@@ -4,10 +4,7 @@ class Invoice {
     client;
     details;
     amount;
-    // shorthand way of constructing class (REQUIRES access modifiers)
-    constructor(client, 
-    // client: string // would not be allowed since no access modifier
-    details, amount) {
+    constructor(client, details, amount) {
         this.client = client;
         this.details = details;
         this.amount = amount;

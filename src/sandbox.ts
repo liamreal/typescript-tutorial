@@ -20,9 +20,16 @@ const docTwo: Resource<object> = {
     data: { name: 'yoshi' }
 }
 
-console.log(docOne, docTwo); // and we still get a unique number to identify the resource type based on its index in ResourceType enums
+// console.log(docOne, docTwo); // and we still get a unique number to identify the resource type based on its index in ResourceType enums
 
 
+// tuples
+// in typescript these are like arrays but they have a fixed type at a particular index
 
+// recap of arrays, can assign any type at any index once defined (given they are all types typescript inferred)
+let arr = ['ryu', 25, true];
+arr[0] = false;
+arr[1] = 'yoshi';
+arr = [30, false]
 
 

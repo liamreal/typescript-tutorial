@@ -21,24 +21,23 @@ form.addEventListener('submit', (e: Event) => {
 
     let doc: HasFormatter;
 
-    // my own improvement, reading ONCE from DOM
-    const formValues = { 
-        toFromValue: toFrom.value, 
-        detailsValue: details.value, 
-        amountValue: amount.valueAsNumber,
-        typeValue: type.value
-    }
+    // gathering type value once
+    const typeValue = type.value;
+
+    // using tuples to simplify code (must be defined in 2 lines otherwise just an array with no explicit typing)
+    let values: [string, string, number];
+    values = [toFrom.value, details.value, amount.valueAsNumber];
 
     // explicit types, no match throws error
-    switch(formValues.typeValue) {
+    switch(typeValue) {
         case 'invoice':
-            doc = new Invoice(formValues.toFromValue, formValues.detailsValue, formValues.amountValue);
+            doc = new Invoice(...values); // spread operator to auto-assign tuple to args
             break;
         case 'payment':
-            doc = new Payment(formValues.toFromValue, formValues.detailsValue, formValues.amountValue);
+            doc = new Payment(...values);
             break;
         default:
-            throw new Error(`invalid document type: ${type.value}`);
+            throw new Error(`invalid document type: ${typeValue}`);
     }
 
     // use our ListTemplate render method

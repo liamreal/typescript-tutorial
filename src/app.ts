@@ -23,7 +23,15 @@ class Invoice {
 const invOne = new Invoice('mario', 'work on the mario website', 250);
 const invTwo = new Invoice('luigi', 'work on the luigi website', 300);
 
-console.log(invOne, invTwo);
+let invoices: Invoice[] = []; // only invoice objects allowed
+
+// invoices.push('hello'); // not allowed
+// invoices.push({name: 'shaun'}); // not allowed
+// invoices.push({client: string, details: string, amount: string}); // also not allowed (not specifically an Invoice and missing format method)
+invoices.push(invOne); // allowed
+invoices.push(invTwo); // also allowed
+
+console.log(invoices); // list of invoices
 
 const form = document.querySelector('.new-item-form') as HTMLFormElement; // cast to HTMLFormElement
 

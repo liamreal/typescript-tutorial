@@ -12,6 +12,7 @@ const me = {
     },
     // skills: [] // cannot add -- does not match interface
 };
+let someone; // in future needs to match structure of IsPerson
 console.log(me);
 import { Invoice } from "./classes/Invoice.js";
 const invOne = new Invoice('mario', 'work on the mario website', 250);

@@ -22,6 +22,8 @@ const me: IsPerson = {
     // skills: [] // cannot add -- does not match interface
 };
 
+let someone: IsPerson; // in future needs to match structure of IsPerson
+
 console.log(me);
 
 import { Invoice } from "./classes/Invoice.js";

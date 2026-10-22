@@ -42,6 +42,5 @@ form.addEventListener('submit', (e: Event) => {
     }
 
     // use our ListTemplate render method
-    list.render(doc, formValues.typeValue, 'end');
-
+    list.render(doc, 'end');
 })

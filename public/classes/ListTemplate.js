@@ -1,18 +1,18 @@
 export class ListTemplate {
-    // when creating list item, pass in unordered list will be added too
+    // our container to add list items to
     constructor(container) {
         this.container = container;
     }
-    // can specify limited set of strings as an argument in pos (so add new list element to start or end of list)
-    render(item, heading, pos) {
-        const li = document.createElement('li'); // typescript infers type as li element
-        // heading for list item
+    // add to start or end of list
+    render(item, pos) {
+        const li = document.createElement('li');
+        // heading is item type (e.g. Payment/Invoice)
         const h4 = document.createElement('h4');
-        h4.innerText = heading;
+        h4.innerText = item.constructor.name; // dynamically get heading based on class: https://dev.to/idmontie/get-class-name-in-typescript-23ih
         li.append(h4);
-        // text inside list item
+        // item description
         const p = document.createElement('p');
-        p.innerText = item.format(); // since item implements HasFormatter, we are certain format() method exists and returns a string
+        p.innerText = item.format(); // item implements HasFormatter => format():string exists
         li.append(p);
         if (pos === 'start') {
             this.container.prepend(li);

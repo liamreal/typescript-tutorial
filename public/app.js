@@ -33,5 +33,5 @@ form.addEventListener('submit', (e) => {
             throw new Error(`invalid document type: ${type.value}`);
     }
     // use our ListTemplate render method
-    list.render(doc, formValues.typeValue, 'end');
+    list.render(doc, 'end');
 });

@@ -17,5 +17,6 @@ console.log(docOne.name); // properties preserved
 interface Resource {
     uid: number;
     resourceName: string;
-    data: '???';
+    data: '???'; // we want this to be generic, may be string, may be object, possibilities are endless
 }
+
